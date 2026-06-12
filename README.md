@@ -29,7 +29,7 @@ Designed for Paper 26.1.2 servers, the plugin provides modern interfaces, SQLite
 ### Homes
 
 - Create multiple homes
-- Instant home teleportation
+- Configurable home teleportation
 - Home management menu
 - SQLite storage
 - Fast and lightweight
