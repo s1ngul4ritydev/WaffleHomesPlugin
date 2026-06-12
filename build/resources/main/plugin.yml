@@ -1,0 +1,92 @@
+name: WaffleHomes
+version: '1.0.0'
+main: dev.wafflycatt.wafflehomes.WaffleHomes
+api-version: '26.1.2'
+description: Homes, RTP, and TPA system with full Bedrock/Geyser/Floodgate support
+author: WafflyCatt
+website: https://wafflecrossplay.netlify.app/
+
+softdepend:
+  - Floodgate
+
+permissions:
+  wafflehomes.home:
+    description: Use /home and /homes
+    default: true
+  wafflehomes.sethome:
+    description: Use /sethome
+    default: true
+  wafflehomes.delhome:
+    description: Use /delhome
+    default: true
+  wafflehomes.rtp:
+    description: Use /rtp
+    default: true
+  wafflehomes.tpa:
+    description: Use /tpa, /tpaccept, /tpdeny, /tphere, /tpsettings
+    default: true
+  wafflehomes.admin:
+    description: Use admin commands (/adminhomes, /adminedithomes, /admindelhomes)
+    default: op
+
+commands:
+  sethome:
+    description: Set a home at your current location
+    usage: /sethome <name>
+    permission: wafflehomes.sethome
+  home:
+    description: Teleport to a home
+    usage: /home <name>
+    permission: wafflehomes.home
+  homes:
+    description: Open the homes menu
+    usage: /homes
+    permission: wafflehomes.home
+  delhome:
+    description: Delete a home
+    usage: /delhome <name>
+    permission: wafflehomes.delhome
+  rtp:
+    description: Randomly teleport to a safe location
+    usage: /rtp
+    permission: wafflehomes.rtp
+  tpa:
+    description: Request to teleport to a player
+    usage: /tpa <player>
+    permission: wafflehomes.tpa
+  tpaccept:
+    description: Accept a teleport request
+    usage: /tpaccept [player]
+    permission: wafflehomes.tpa
+  tpdeny:
+    description: Deny a teleport request
+    usage: /tpdeny [player]
+    permission: wafflehomes.tpa
+  tphere:
+    description: Request to summon a player to you
+    usage: /tphere <player>
+    permission: wafflehomes.tpa
+  tphereaccept:
+    description: Accept a tphere request
+    usage: /tphereaccept [player]
+    permission: wafflehomes.tpa
+  tpheredeny:
+    description: Deny a tphere request
+    usage: /tpheredeny [player]
+    permission: wafflehomes.tpa
+  tpsettings:
+    description: Manage your teleport preferences
+    usage: /tpsettings
+    permission: wafflehomes.tpa
+  adminhomes:
+    description: View any player's homes (admin)
+    usage: /adminhomes <player>
+    permission: wafflehomes.admin
+  adminedithomes:
+    description: Rename a player's home (admin)
+    usage: /adminedithomes <player> <home> <newname>
+    permission: wafflehomes.admin
+  admindelhomes:
+    description: Delete a player's home (admin)
+    usage: /admindelhomes <player> <home>
+    permission: wafflehomes.admin
